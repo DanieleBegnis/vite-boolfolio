@@ -8,8 +8,6 @@ export default {
 </script>
 
 <template>
-  test test test
-  <h1>test</h1>
   <ProjectsList></ProjectsList>
 </template>
 
