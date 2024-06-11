@@ -5,23 +5,28 @@ export default {
     name: 'ProjectDescription',
     data() {
         return {
-            post: null
+            project: null
         };
     },
     methods: {
-        getPostDetails() {
-            axios.get(`http://127.0.0.1:8000/api/posts/${this.$route.params.slug}`)
+        getProjectDetails() {
+            axios.get(`http://127.0.0.1:8000/api/projects/${this.$route.params.slug}`)
             .then((response) => {
-                this.post = response.data.post;
+                console.log(response)
+                this.project = response.data.results;
             });
         }
     },
     mounted() {
-        this.getPostDetails();
+        this.getProjectDetails();
     }
 }
 </script>
 
 <template>
-    test test singolo progetto
+    <!-- test test singolo progetto chiamato {{ project.slug }} -->
+     
+     <div v-if="project">
+        <h1>test descrizione {{ project.slug }}</h1>
+     </div>
 </template>
