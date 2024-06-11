@@ -11,10 +11,10 @@ export default {
     methods: {
         getProjectDetails() {
             axios.get(`http://127.0.0.1:8000/api/projects/${this.$route.params.slug}`)
-            .then((response) => {
-                console.log(response)
-                this.project = response.data.results;
-            });
+                .then((response) => {
+                    console.log(response)
+                    this.project = response.data.results;
+                });
         }
     },
     mounted() {
@@ -24,9 +24,13 @@ export default {
 </script>
 
 <template>
-    <!-- test test singolo progetto chiamato {{ project.slug }} -->
-     
-     <div v-if="project">
-        <h1>test descrizione {{ project.slug }}</h1>
-     </div>
+    <div v-if="project">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.name }}</h5>
+                <p class="card-text">{{ project.summary }}</p>
+                <p class="card-text">{{ project.client_name }}</p>
+            </div>
+        </div>
+    </div>
 </template>
