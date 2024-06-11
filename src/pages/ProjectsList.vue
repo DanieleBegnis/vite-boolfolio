@@ -1,6 +1,6 @@
 <script>
 import axios from 'axios';
-import SingleProject from './SingleProject.vue';
+import SingleProject from '../components/SingleProject.vue';
 
 export default {
     name: 'ProjectsList',

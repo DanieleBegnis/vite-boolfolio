@@ -21,12 +21,9 @@ export default {
                         <li class="nav-item">
                             <router-link class="nav-link active" aria-current="page" :to="{ name: 'features' }">Features</router-link>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li> -->
+                            <router-link class="nav-link active" aria-current="page" :to="{ name: 'projects' }">Projects</router-link>
+                        </li>
                     </ul>
                 </div>
             </div>
